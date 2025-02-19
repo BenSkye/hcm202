@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --primary: 0 100% 50%;
   --primary-foreground: 210 40% 98%;
   --secondary: 45 100% 50%;
@@ -14,6 +14,38 @@
   --primary-foreground: 210 40% 98%;
   --secondary: 45 100% 40%;
   --secondary-foreground: 222.2 47.4% 11.2%;
+} */
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #212121;
+
+    --primary: #d32f2f;
+    --secondary: #ffcc00;
+    --error: #a31515;
+
+    --primary-dark: #9a2424;
+    --secondary-dark: #cc9900;
+
+    --salmon: #ff8c00;
+    --sky-blue: #e0f7ff;
+    --ocean-blue: #1e90ff;
+    --electric-blue: #0078ff;
+    --sub-gray: #787878;
+    --aqua-blue: #00e7ff;
+    --gray: #787878;
+    --silver: #d3d3d3;
+    --pink: #fff1f1;
+
+    --light-red: #ff6347;
+    --light-blue: #f8faff;
+    --dark-silver: #4f4f4f;
+
+    --shadow-section: 0px 0px 8px 0px #6c6c6c40;
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
 }
 
 @layer base {
@@ -22,20 +54,23 @@
   }
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
+[hidden] {
+  display: none;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
+/* scrollbar style like macos */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary));
-  border-radius: 4px;
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.8);
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #646565;
+  border-radius: 5px;
 }

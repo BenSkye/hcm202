@@ -77,13 +77,13 @@ export default function Home() {
           <div className="flex justify-center space-x-4">
             <Link
               href="/timeline"
-              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-colors"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-transform transform hover:scale-105"
             >
               Xem dòng thời gian
             </Link>
             <Link
               href="/chat"
-              className="bg-secondary text-primary px-6 py-2 rounded-full hover:bg-secondary-dark transition-colors"
+              className="bg-secondary text-primary px-6 py-2 rounded-full hover:bg-primary-dark transition-transform transform hover:scale-105"
             >
               Hỏi đáp AI
             </Link>
@@ -95,7 +95,7 @@ export default function Home() {
         className="mt-12 text-center mb-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.6 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
       >
         <JourneyMap />
       </motion.div>
@@ -105,7 +105,7 @@ export default function Home() {
         className="mt-12 text-center mb-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.6 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
       >
         <h2 className="text-2xl font-semibold mb-4">Video tư liệu về cuộc đời của Chủ tịch Hồ Chí Minh</h2>
         <div className="max-w-[640px] mx-auto">
@@ -125,7 +125,7 @@ export default function Home() {
         className="text-3xl font-semibold mb-6 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
       >
         Hình ảnh về hành trình cứu nước
       </motion.h2>
@@ -174,7 +174,6 @@ export default function Home() {
                 alt={item.name}
                 width={100}
                 height={100}
-                loading='lazy'
                 className="rounded-full mx-auto mb-4"
               />
               <h3 className="text-xl font-semibold">{item.name}</h3>
@@ -199,13 +198,13 @@ export default function Home() {
         <div className="flex justify-center space-x-4">
           <Link
             href="/timeline"
-            className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-colors"
+            className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-transform transform hover:scale-105"
           >
             Xem dòng thời gian
           </Link>
           <Link
             href="/chat"
-            className="bg-secondary text-primary px-6 py-2 rounded-full hover:bg-secondary-dark transition-colors"
+            className="bg-secondary text-primary px-6 py-2 rounded-full hover:bg-primary-dark transition-transform transform hover:scale-105"
           >
             Hỏi đáp AI
           </Link>

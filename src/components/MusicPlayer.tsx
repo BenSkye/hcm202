@@ -41,13 +41,13 @@ export default function MusicPlayer() {
     }, [isMounted]);
 
     return (
-        <div className="fixed bottom-4 right-4 p-2 bg-gray-800 rounded-full shadow-lg z-10">
+        <div className="fixed bottom-4 right-4 p-2 bg-secondary rounded-full shadow-lg z-10 hover:bg-primary-dark transition-transform transform hover:scale-105">
             <audio ref={audioRef} src="https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Ftuyenngondoclap.mp3?alt=media&token=5ae6b72f-dfdd-4a02-9405-2c5845c8883d" preload="auto" loop />
             <button
                 onClick={togglePlay}
-                className="text-white p-2 rounded-full hover:bg-gray-700 transition"
+                className=" p-2 rounded-full  transition"
             >
-                {isPlaying ? <Pause size={24} /> : <Play size={24} />}
+                {isPlaying ? <Pause size={24} color='red' /> : <Play size={24} color='red' />}
             </button>
         </div>
     );

@@ -23,7 +23,7 @@ const JourneyMap = () => {
                     <button
                         key={mapId}
                         onClick={() => setSelectedMap(mapId as 1 | 2)}
-                        className={`px-4 py-1.5 rounded-[4px] text-base font-medium transition-all duration-300 ${selectedMap === mapId
+                        className={`px-4 py-1.5 rounded-[4px] text-base font-medium transition-all duration-300 hover:bg-primary-dark transition-transform transform hover:scale-105 ${selectedMap === mapId
                             ? 'bg-primary text-white shadow-lg'
                             : 'bg-white text-gray-600 hover:bg-gray-50'
                             }`}

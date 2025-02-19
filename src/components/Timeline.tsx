@@ -97,7 +97,7 @@ const Timeline: React.FC = () => {
                     className="mt-12 text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.4 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <h2 className="text-2xl font-semibold mb-4">Nghe bản Tuyên ngôn độc lập</h2>
                     <audio controls className="mx-auto w-full max-w-md">
@@ -132,10 +132,9 @@ const Timeline: React.FC = () => {
                             <Image
                                 src={milestone.image}
                                 alt={milestone.event}
-                                className="w-full max-w-md mb-4 rounded-lg shadow-md"
-                                loading='lazy'
-                                width={100}
-                                height={100}
+                                width={500}
+                                height={300}
+                                className="rounded-lg shadow-lg"
                             />
                         )}
 
